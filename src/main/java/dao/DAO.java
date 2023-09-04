@@ -16,14 +16,14 @@ public abstract class DAO {
 	ResultSet rs;
 
 	// 接続
-	private void connect() throws NamingException, SQLException {
+	protected void connect() throws NamingException, SQLException {
 		Context context = new InitialContext();
 		DataSource ds = (DataSource) context.lookup("java:comp/env/mariadb");
 		this.con = ds.getConnection();
 	}
 
 	// 切断
-	private void disconnect() {
+	protected void disconnect() {
 		try {
 			if (rs != null) {
 				rs.close();
