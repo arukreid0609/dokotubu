@@ -48,4 +48,21 @@ public class UsersDAO extends DAO{
 			this.disconnect();
 		}
 	}
+	
+	// １件取得
+	public boolean isExist(String userName) {
+		boolean result = false;
+		try {
+			this.connect();
+			stmt = con.prepareStatement("SELECT * FROM users WHERE name = ?");
+			stmt.setString(1, userName);
+			rs = stmt.executeQuery();
+
+		}catch(NamingException | SQLException e) {
+			e.printStackTrace();
+		}finally {
+			this.disconnect();
+		}
+		return false;
+	}
 }
