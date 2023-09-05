@@ -20,7 +20,7 @@ public class MuttersDAO extends DAO{
 				// レコードから各カラムのデータ取得
 				int id = rs.getInt("id");
 				String userName = rs.getString("userName");
-				String text = rs.getString("mutter");
+				String text = rs.getString("text");
 				
 				// 取得したデータでインスタンス作成、リストに追加
 				Mutter mutter = new Mutter(id,userName,text);
