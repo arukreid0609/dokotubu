@@ -3,7 +3,7 @@
 <%@ page import="model.*, java.util.List" %>
 <%
 User loginUser = (User)session.getAttribute("loginUser");
-List<Mutter> mutterList = (List<Mutter>)application.getAttribute("mutterList");
+List<Mutter> mutterList = (List<Mutter>)request.getAttribute("mutterList");
 %>
 <!DOCTYPE html>
 <html>
