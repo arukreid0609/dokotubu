@@ -22,8 +22,13 @@ List<Mutter> mutterList = (List<Mutter>)request.getAttribute("mutterList");
 		<input type="text" name="text">
 		<input type="submit" value="つぶやく">
 	</form>
-	<% for(Mutter mutter : mutterList){ %>
+<%-- 	<% for(Mutter mutter : mutterList){ %>
 	 <p><%= mutter.getUserName() %>:<%=mutter.getText() %></p>
 	<% } %>
-</body>
+ --%>
+	<div id="list"></div>
+	<script src = "../../js/main.js">
+		
+	</script>
+ </body>
 </html>
